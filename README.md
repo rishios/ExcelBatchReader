@@ -4,9 +4,9 @@ ExcelBatchReader
 Lightweight and fast library written in C# for reading Microsoft Excel files (.xlsx and .xls) in batch
 
 Features:
-1. Batch reading, Schema reading, Row skipping, Row reading.
-2. Reading top rows, all rows, sheet names, column names, column data types.
-3. Finding blank sheets through GetSchema method.
+* Batch reading, Schema reading, Row skipping, Row reading.
+* Reading top rows, all rows, sheet names, column names, column data types.
+* Finding blank sheets through GetSchema method.
 
 ## Finding the binaries
 The compiled binaries are available in the release. To try out the features, download binary files (Binaries.zip)
@@ -70,7 +70,8 @@ and use in your project.
 		foreach (DataTable dt in dataSet.Tables)
 		{
 			excelReader.SheetName = dt.TableName;
-			excelReader.IsFirstRowAsColumnNames = Convert.ToBoolean(dt.ExtendedProperties["IsFirstRowAsColumnNames"]);
+			excelReader.IsFirstRowAsColumnNames =
+			Convert.ToBoolean(dt.ExtendedProperties["IsFirstRowAsColumnNames"]);
 			excelReader.SkipRows = Convert.ToInt32(dt.ExtendedProperties["SkipRows"]);
 			while (excelReader.ReadBatch())
 			{
@@ -111,8 +112,8 @@ excelReader.Close();
 ### Notes
 * ExcelBatchReader is an extention of ExcelDataReader. A pull request is in-progress.
 * Use multi using statement when using IExcelDataReader so that the excel file handle is closed properly.
-  IExcelDataReader's dispose method does not close excel file handle immediately. Refer below code:
-### C# code :
+  IExcelDataReader's dispose method does not close excel file handle immediately. Refer below code.
+#### C# code :
 ```c#
 	using (FileStream fileStream = File.OpenRead(filePath))
 	using (IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(fileStream))
