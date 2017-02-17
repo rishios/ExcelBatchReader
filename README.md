@@ -112,8 +112,7 @@ excelReader.Close();
 ### Notes
 * ExcelBatchReader is an extention of ExcelDataReader. A pull request is in-progress.
 * Use multi using statement when using IExcelDataReader so that the excel file handle is closed properly.
-  IExcelDataReader's dispose method does not close excel file handle immediately. Refer below code.
-#### C# code :
+  IExcelDataReader's dispose method does not close excel file handle immediately. Refer below code:
 ```c#
 	using (FileStream fileStream = File.OpenRead(filePath))
 	using (IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(fileStream))
