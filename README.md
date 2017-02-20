@@ -1,7 +1,8 @@
 ExcelBatchReader
 ================
 
-Lightweight and fast library written in C# for reading Microsoft Excel files (.xlsx and .xls) in batch
+Lightweight and fast library written in C# for reading Microsoft Excel files (.xlsx and .xls) in batch.
+It does not requires excel or access installation.
 
 Features:
 * Batch reading, Schema reading, Row skipping, Row reading.
