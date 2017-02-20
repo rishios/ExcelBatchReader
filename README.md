@@ -15,6 +15,10 @@ and use in your project.
 ## How to use
 ### C# code :
 ```c#
+
+using Excel;
+...
+
 //1. Reading sheet names
 	List<string> sheetNames = null;
 	using (IExcelDataReader excelReader =
@@ -82,6 +86,9 @@ and use in your project.
 	}
 
 // The below methods of ExcelDataReader which is extended to ExcelBatchReader will work as expected.
+
+using Excel;
+...
 
 FileStream stream = File.Open(filePath, FileMode.Open, FileAccess.Read);
 
