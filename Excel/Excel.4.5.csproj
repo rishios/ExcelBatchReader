@@ -26,7 +26,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release45\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -100,6 +100,7 @@
     <Compile Include="Core\OpenXmlFormat\XlsxXf.cs" />
     <Compile Include="Core\OpenXmlFormat\XmlReaderExtensions.cs" />
     <Compile Include="Core\ReferenceHelper.cs" />
+    <Compile Include="Core\SheetParameters.cs" />
     <Compile Include="Core\ZipWorker.cs" />
     <Compile Include="Errors.cs" />
     <Compile Include="ExcelBinaryReader.cs" />

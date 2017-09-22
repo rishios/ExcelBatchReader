@@ -86,6 +86,7 @@ namespace Excel.Core
                         if (row.IsNull(i))
                             continue;
                         var curType = row[i].GetType();
+                        if (curType.Name.Equals("Double", StringComparison.OrdinalIgnoreCase)) { curType = typeof(Decimal); }
                         if (curType != type)
                         {
                             if (type == null)
@@ -140,6 +141,7 @@ namespace Excel.Core
                     if (row.IsNull(i))
                         continue;
                     var curType = row[i].GetType();
+                    if (curType.Name.Equals("Double", StringComparison.OrdinalIgnoreCase)) { curType = typeof(Decimal); }
                     if (curType != type)
                     {
                         if (type == null)
